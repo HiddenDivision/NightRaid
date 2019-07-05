@@ -171,7 +171,7 @@ bot.on('message', msg=>{
 		const embed = new RichEmbed()
 		.setTitle('Available Commands :')
 		.addField('General commands', "'-help' : Shows you all available commands.\n'-meme' : Sends memes.")
-		.addField('Moderation commands', "'-kick' : Kicks a specific user from the server.\n'-ban' : Ban a specific user from the server.\n'-unban' : Unban a specific user from the server (Only with the discord ID).\n'-purge' : Pruge a specific amount of messages on the channel.\n'-announcement' : Makes a public announcement to the server.")
+		.addField('Moderation commands', "'-kick' : Kicks a specific user from the server.\n'-ban' : Ban a specific user from the server.\n'-unban' : Unban a specific user from the server (Only with the discord ID).\n'-purge' : Pruge a specific amount of messages on the channel.\n'-announcement' : Makes a public announcement to the server.\n'-meeting' : Makes a public meeting to the server.")
 		.addField("Esdeath's commands", "'I love you Tatsumi' : Show your love to your Tatsumi.\n'...' : Somebody is about to have a bad time...\n'How are my boobs, Tatsumi?' : Esdeath want to do fan service for her Tatsumi.\n'I want to do it with you, Tatsumi...' : Tatsumi didn't expect that...")
 		.addField("Tatsumi's commands", "'I love you Esdeath!' : Show your love to your Esdeath.\n'Incursio!' : Show your real power to everyone.")
 		.addField("Lubbock's commands", "'Let me kiss you Tatsumi. O3O' : Why though?")
@@ -249,7 +249,7 @@ bot.on('message', msg=>{
 				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
 				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
 				if(isNaN(parseFloat(args[1]))){
-					return msg.channel.sendMessage('What is this..? Your time uses letter?');
+					return msg.channel.sendMessage('What is this..? Your time uses letters?');
 				}
 				let canada = args[1] - 6
 				let pheonix = args[1] - 9
@@ -275,14 +275,14 @@ bot.on('message', msg=>{
 				const mAuthor = msg.author.username
 				if(!mchannel) return;
 				msg.channel.bulkDelete(1);
-				mchannel.sendMessage('@ev1eryone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
+				mchannel.sendMessage('@everyone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
 			}
 			else{
 				const mMessage = args.join(" ").slice(12);
 				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
 				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
 				if(isNaN(parseFloat(args[1]))){
-					return msg.channel.sendMessage('What is this..? Your time uses letter?');
+					return msg.channel.sendMessage('What is this..? Your time uses letters?');
 				}
 				let canada = args[1] - 6
 				let pheonix = args[1] - 9
@@ -308,7 +308,7 @@ bot.on('message', msg=>{
 				const mAuthor = msg.author.username
 				if(!mchannel) return;
 				msg.channel.bulkDelete(1);
-				mchannel.sendMessage('@ev1eryone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
+				mchannel.sendMessage('@everyone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
 			}
 		break;
 		case '-kick':
