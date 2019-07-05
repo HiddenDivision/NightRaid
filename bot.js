@@ -195,6 +195,24 @@ bot.on('message', msg=>{
 			return;
 		}
 	}
+	if(msg.content === "Gimme food."){
+		if(msg.author.id === '186066160146448384'){
+			const najinda = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596805657764692033/tenor_6.gif');
+			msg.channel.sendMessage(najinda);
+		}
+		else{
+			return;
+		}
+	}
+	if(msg.content === "Being abused."){
+		if(msg.author.id === '195515380326858752'){
+			const chelsea = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596807682569011210/giphy.gif');
+			msg.channel.sendMessage(chelsea);
+		}
+		else{
+			return;
+		}
+	}
 	if(msg.content === "-help"){
 		const embed = new RichEmbed()
 		.setTitle('Available Commands :')
@@ -209,13 +227,15 @@ bot.on('message', msg=>{
 		.addField("Wave's commands", "'Grand Chariot!' : Another badass Teigu.")
 		.addField("Susanoo's commands", "'Mirror.' : Don't underestimate him. He reflect everything.")
 		.addField("Bols's commands", "'OwO' : Bols can be cute?")
+		.addField("Najinda's commands", "'Gimme food.' : She is hungry.")
+		.addField("Chealsea's commands", "'Being abused.' : Oh no. She's dead?")
 		.setColor(0x160033)
 		msg.channel.sendEmbed(embed);
 	}
 	if(msg.content === "-roles"){
 		const embed = new RichEmbed()
 		.setTitle('Night Raid roles :')
-		.addField('All tooken roles', "Esdeath (Kideath)\nTatsumi (LxnelyKing)\nLubbock (Ø₱)\nLeone (AkimboDice)\nAkame (Fridy)\nKurome (Naipeu)\nWave (ℝ𝔹𝕏𝟝𝟘𝟘𝟘)\nSusanoo (PotDYaourt)\nBols (Twachx)\n \nPlease contact Fridy#8811 to claim an unclaimed character.")
+		.addField('All tooken roles', "Esdeath (Kideath)\nTatsumi (LxnelyKing)\nLubbock (Ø₱)\nLeone (AkimboDice)\nAkame (Fridy)\nKurome (Naipeu)\nWave (ℝ𝔹𝕏𝟝𝟘𝟘𝟘)\nSusanoo (PotDYaourt)\nBols (Twachx)\nNajinda (Yamete)\nChelsea (YaNobie)\n \nPlease contact Fridy#8811 to claim an unclaimed character.")
 		.setColor(0x160033)
 		msg.channel.sendEmbed(embed);
 	}
