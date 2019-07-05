@@ -185,7 +185,7 @@ bot.on('message', msg=>{
 		}
 	}
 	if(msg.content === "Mirror."){
-		if(msg.author.id === '219422877064101890'){
+		if(msg.author.id === '155773083196588033'){
 			const susanoo = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596797560706826252/tenor_5.gif');
 			msg.channel.sendMessage(susanoo);
 		}
@@ -194,7 +194,7 @@ bot.on('message', msg=>{
 		}
 	}
 	if(msg.content === "OwO"){
-		if(msg.author.id === '155773083196588033'){
+		if(msg.author.id === '219422877064101890'){
 			const susanoo = new Attachment('https://cdn.discordapp.com/attachments/596552545095254032/596797002159882262/image0.gif');
 			msg.channel.sendMessage(susanoo);
 		}
@@ -242,7 +242,7 @@ bot.on('message', msg=>{
 	if(msg.content === "-roles"){
 		const embed = new RichEmbed()
 		.setTitle('Night Raid roles :')
-		.addField('All tooken roles', "Esdeath (Kideath)\nTatsumi (LxnelyKing)\nLubbock (Ø₱)\nLeone (AkimboDice)\nAkame (Fridy)\nKurome (Naipeu)\nWave (ℝ𝔹𝕏𝟝𝟘𝟘𝟘)\nSusanoo (PotDYaourt)\nBols (Twachx)\nNajinda (Yamete)\nChelsea (YaNobie)\n \nPlease contact Fridy#8811 to claim an unclaimed character.")
+		.addField('All tooken roles', "Esdeath (Kideath)\nTatsumi (LxnelyKing)\nLubbock (Ø₱)\nLeone (AkimboDice)\nAkame (Fridy)\nKurome (Naipeu)\nWave (ℝ𝔹𝕏𝟝𝟘𝟘𝟘)\nSusanoo (Twachx)\nBols (PotDYaourt)\nNajinda (Yamete)\nChelsea (YaNobie)\n \nPlease contact Fridy#8811 to claim an unclaimed character.")
 		.setColor(0x160033)
 		msg.channel.sendEmbed(embed);
 	}
