@@ -289,7 +289,7 @@ bot.on('message', msg=>{
 					mexico = args[1] - 7
 					mexico = mexico + 24;
 				}
-				const mchannel = bot.channels.find(channel => channel.name === "ɱɇɇʈłᵰǥ1");
+				const mchannel = bot.channels.find(channel => channel.name === "ɱɇɇʈłᵰǥ");
 				const mAuthor = msg.author.username
 				if(!mchannel) return;
 				msg.channel.bulkDelete(1);
@@ -322,7 +322,7 @@ bot.on('message', msg=>{
 					mexico = args[1] - 7
 					mexico = mexico + 24;
 				}
-				const mchannel = bot.channels.find(channel => channel.name === "ɱɇɇʈłᵰǥ1");
+				const mchannel = bot.channels.find(channel => channel.name === "ɱɇɇʈłᵰǥ");
 				const mAuthor = msg.author.username
 				if(!mchannel) return;
 				msg.channel.bulkDelete(1);
