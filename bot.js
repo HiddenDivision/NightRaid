@@ -171,6 +171,7 @@ bot.on('message', msg=>{
 		const embed = new RichEmbed()
 		.setTitle('Available Commands :')
 		.addField('General commands', "'-help' : Shows you all available commands.\n'-meme' : Sends memes.")
+		.addField('Moderation commands', "'-kick' : Kicks a specific user from the server.\n'-ban' : Ban a specific user from the server.\n'-unban' : Unban a specific user from the server (Only with the discord ID).\n'-purge' : Pruge a specific amount of messages on the channel.\n'-announcement' : Makes a public announcement to the server.")
 		.addField("Esdeath's commands", "'I love you Tatsumi' : Show your love to your Tatsumi.\n'...' : Somebody is about to have a bad time...\n'How are my boobs, Tatsumi?' : Esdeath want to do fan service for her Tatsumi.\n'I want to do it with you, Tatsumi...' : Tatsumi didn't expect that...")
 		.addField("Tatsumi's commands", "'I love you Esdeath!' : Show your love to your Esdeath.\n'Incursio!' : Show your real power to everyone.")
 		.addField("Lubbock's commands", "'Let me kiss you Tatsumi. O3O' : Why though?")
@@ -234,10 +235,10 @@ bot.on('message', msg=>{
 			const aMessage = args.join(" ").slice(14);
 			const achannel = bot.channels.find(channel => channel.name === "₳ᵰᵰ¤ᵾᵰ¢ɇ₥ɇᵰʈ");
 			const aAuthor = msg.author.username
-			const agif = new Attachment('https://images-gmi-pmc.edge-generalmills.com/087d17eb-500e-4b26-abd1-4f9ffa96a2c6.jpg');
+			const agif = new Attachment('https://media.discordapp.net/attachments/596552545095254032/596560337533272084/1486990413_Flag.gif');
 			if(!achannel) return;
 			msg.channel.bulkDelete(1);
-			achannel.sendMessage('@everyone ' + aMessage + '\n \n' + 'Announcement made by ' + aAuthor + '.')
+			achannel.sendMessage('@everyone \n \n' + aMessage + '\n \n' + 'Announcement made by ' + aAuthor + '.')
 			achannel.sendMessage(agif)
 		break;
 		case '-kick':
