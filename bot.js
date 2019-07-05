@@ -246,8 +246,8 @@ bot.on('message', msg=>{
 			if(!args[2]) return msg.channel.sendMessage('A meeting without anything? Sounds boring...')
 			if(args[1].length === 1){
 				const mMessage = args.join(" ").slice(11);
-				if(args[1].length > 2) return msg.channel.sendMessage('What time system are you using? Alien?');
 				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
+				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
 				if(isNaN(args[1])){
 					msg.channel.sendMessage('What is this..? Your time uses letter?');
 				}
@@ -279,7 +279,8 @@ bot.on('message', msg=>{
 			}
 			else{
 				const mMessage = args.join(" ").slice(12);
-				if(args[1].length > 2) return msg.channel.sendMessage('What time system are you using? Alien?');
+				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
+				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
 				if(isNaN(args[1])){
 					msg.channel.sendMessage('What is this..? Your time uses letter?');
 				}
