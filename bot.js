@@ -241,33 +241,6 @@ bot.on('message', msg=>{
 			achannel.sendMessage('@everyone \n \n' + aMessage + '\n \n' + 'Announcement made by ' + aAuthor + '.')
 			achannel.sendMessage(agif)
 		break;
-		case '-meeting':
-			if(!msg.member.roles.find(r => r.name === "Night God")) return msg.channel.sendMessage("You are not the leader. You can't create a meeting.");
-			if(!args[2]) return msg.channel.sendMessage('A meeting without anything? Sounds boring...')
-			if(args[1].length === 1){
-				const aMessage = args.join(" ").slice(11);
-			}
-			else{
-				const aMessage = args.join(" ").slice(12);
-			}
-			if(args[1].length > 2) return msg.channel.sendMessage('What time system are you using? Alien?');
-			if(isNaN(args[1])){
-				msg.channel.sendMessage('What is this..? Your time uses letter?');
-			}
-			let canada = args[1] - 6
-			let pheonix = args[1] - 9
-			let argentina = args[1] - 5
-			let mexico = args[1] - 7
-			if(canada < 0) let canada = canada + 24;
-			if(pheonix < 0) let pheonix = pheonix + 24;
-			if(argentina < 0) let argentina = argentina + 24;
-			if(mexico < 0) let mexico = mexico + 24;
-			const achannel = bot.channels.find(channel => channel.name === "ɱɇɇʈłᵰǥ1");
-			const aAuthor = msg.author.username
-			if(!achannel) return;
-			msg.channel.bulkDelete(1);
-			achannel.sendMessage('@everyone \n**New Meeting**\n' + aMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + aAuthor + '.')
-		break;
 		case '-kick':
 			const tuser = msg.mentions.users.first();
 			const kreason = args.join(" ").slice(28);
