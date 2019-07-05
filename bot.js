@@ -66,6 +66,16 @@ bot.on('message', msg=>{
 			return;
 		}
 	}
+	if(msg.content === "I'm cute"){
+		if(msg.author.id === '596034659419422739'){
+			const esdeath = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596803328642514944/1459830568_4bf4f30c6cb57ef104ab411e0a6322421409502863_full.gif');
+			msg.channel.sendMessage("Yes yes. She is cute.");
+			msg.channel.sendMessage(esdeath);
+		}
+		else{
+			return;
+		}
+	}
 	if(msg.content === 'I love you Esdeath!'){
 		if(msg.author.id === '285962307987701762'){
 			const tatsumi = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596570280101543936/wpid-screenshot_2014-11-15-18-18-02-1.png');
@@ -190,13 +200,15 @@ bot.on('message', msg=>{
 		.setTitle('Available Commands :')
 		.addField('General commands', "'-help' : Shows you all available commands.\n'-meme' : Sends memes.")
 		.addField('Moderation commands', "'-kick' : Kicks a specific user from the server.\n'-ban' : Ban a specific user from the server.\n'-unban' : Unban a specific user from the server (Only with the discord ID).\n'-purge' : Pruge a specific amount of messages on the channel.\n'-announcement' : Makes a public announcement to the server.\n'-meeting' : Makes a public meeting to the server.")
-		.addField("Esdeath's commands", "'I love you Tatsumi' : Show your love to your Tatsumi.\n'...' : Somebody is about to have a bad time...\n'How are my boobs, Tatsumi?' : Esdeath want to do fan service for her Tatsumi.\n'I want to do it with you, Tatsumi...' : Tatsumi didn't expect that...")
+		.addField("Esdeath's commands", "'I love you Tatsumi' : Show your love to your Tatsumi.\n'...' : Somebody is about to have a bad time...\n'How are my boobs, Tatsumi?' : Esdeath want to do fan service for her Tatsumi.\n'I want to do it with you, Tatsumi...' : Tatsumi didn't expect that...\n'I'm cute' : She best girl.")
 		.addField("Tatsumi's commands", "'I love you Esdeath!' : Show your love to your Esdeath.\n'Incursio!' : Show your real power to everyone.")
 		.addField("Lubbock's commands", "'Let me kiss you Tatsumi. O3O' : Why though?")
 		.addField("Leone's commands", "':3' : OwO.\n'Tatsumi...' : Oh no... Tatsumi cannot handle even more fan services!")
 		.addField("Akame's commands", "'Me go cry...' : Everyone knows that Akame cries a lot...\n'Ready to die?' : She has no mercy.\n'Please... Don't die Tatsumi...' : Yeah I know... It's not the only girl that loves him.\n'Adios... Esdeath and Tatsumi.' : They die. Big spoiler.")
 		.addField("Kurome's commands", "'*Staring intensely.*' : Please stop...")
 		.addField("Wave's commands", "'Grand Chariot!' : Another badass Teigu.")
+		.addField("Susanoo's commands", "'Mirror.' : Don't underestimate him. He reflect everything.")
+		.addField("Bols's commands", "'OwO' : Bols can be cute?")
 		.setColor(0x160033)
 		msg.channel.sendEmbed(embed);
 	}
