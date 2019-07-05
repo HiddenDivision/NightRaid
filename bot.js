@@ -167,6 +167,24 @@ bot.on('message', msg=>{
 			return;
 		}
 	}
+	if(msg.content === "Mirror."){
+		if(msg.author.id === '219422877064101890'){
+			const susanoo = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596797560706826252/tenor_5.gif');
+			msg.channel.sendMessage(susanoo);
+		}
+		else{
+			return;
+		}
+	}
+	if(msg.content === "OwO"){
+		if(msg.author.id === '219422877064101890'){
+			const susanoo = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596797560706826252/tenor_5.gif');
+			msg.channel.sendMessage(susanoo);
+		}
+		else{
+			return;
+		}
+	}
 	if(msg.content === "-help"){
 		const embed = new RichEmbed()
 		.setTitle('Available Commands :')
