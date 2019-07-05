@@ -159,6 +159,16 @@ bot.on('message', msg=>{
 			return;
 		}
 	}
+	if(msg.content === "..."){
+		if(msg.author.id === '333357946744602647'){
+			const akame = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596809522807439384/1498048478_tumblr_nglsikuDqM1rbrys3o2_r1_500.gif');
+			msg.channel.sendMessage('You know what will happen next... :smiling_imp:');
+			msg.channel.sendMessage(akame);
+		}
+		else{
+			return;
+		}
+	}
 	if(msg.content === "*Staring intensely.*"){
 		if(msg.author.id === '216320185873727488'){
 			const kurome = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596582707752861696/tenor_2.gif');
@@ -222,7 +232,7 @@ bot.on('message', msg=>{
 		.addField("Tatsumi's commands", "'I love you Esdeath!' : Show your love to your Esdeath.\n'Incursio!' : Show your real power to everyone.")
 		.addField("Lubbock's commands", "'Let me kiss you Tatsumi. O3O' : Why though?")
 		.addField("Leone's commands", "':3' : OwO.\n'Tatsumi...' : Oh no... Tatsumi cannot handle even more fan services!")
-		.addField("Akame's commands", "'Me go cry...' : Everyone knows that Akame cries a lot...\n'Ready to die?' : She has no mercy.\n'Please... Don't die Tatsumi...' : Yeah I know... It's not the only girl that loves him.\n'Adios... Esdeath and Tatsumi.' : They die. Big spoiler.")
+		.addField("Akame's commands", "'Me go cry...' : Everyone knows that Akame cries a lot...\n'...' : You said something wrong...\n'Ready to die?' : She has no mercy.\n'Please... Don't die Tatsumi...' : Yeah I know... It's not the only girl that loves him.\n'Adios... Esdeath and Tatsumi.' : They die. Big spoiler.")
 		.addField("Kurome's commands", "'*Staring intensely.*' : Please stop...")
 		.addField("Wave's commands", "'Grand Chariot!' : Another badass Teigu.")
 		.addField("Susanoo's commands", "'Mirror.' : Don't underestimate him. He reflect everything.")
