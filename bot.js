@@ -66,7 +66,7 @@ bot.on('message', msg=>{
 			return;
 		}
 	}
-	if(msg.content === "I'm cute"){
+	if(msg.content === "I'm cute."){
 		if(msg.author.id === '596034659419422739'){
 			const esdeath = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596803328642514944/1459830568_4bf4f30c6cb57ef104ab411e0a6322421409502863_full.gif');
 			msg.channel.sendMessage("Yes yes. She is cute.");
@@ -200,7 +200,7 @@ bot.on('message', msg=>{
 		.setTitle('Available Commands :')
 		.addField('General commands', "'-help' : Shows you all available commands.\n'-meme' : Sends memes.")
 		.addField('Moderation commands', "'-kick' : Kicks a specific user from the server.\n'-ban' : Ban a specific user from the server.\n'-unban' : Unban a specific user from the server (Only with the discord ID).\n'-purge' : Pruge a specific amount of messages on the channel.\n'-announcement' : Makes a public announcement to the server.\n'-meeting' : Makes a public meeting to the server.")
-		.addField("Esdeath's commands", "'I love you Tatsumi' : Show your love to your Tatsumi.\n'...' : Somebody is about to have a bad time...\n'How are my boobs, Tatsumi?' : Esdeath want to do fan service for her Tatsumi.\n'I want to do it with you, Tatsumi...' : Tatsumi didn't expect that...\n'I'm cute' : She best girl.")
+		.addField("Esdeath's commands", "'I love you Tatsumi' : Show your love to your Tatsumi.\n'...' : Somebody is about to have a bad time...\n'How are my boobs, Tatsumi?' : Esdeath want to do fan service for her Tatsumi.\n'I want to do it with you, Tatsumi...' : Tatsumi didn't expect that...\n'I'm cute.' : She best girl.")
 		.addField("Tatsumi's commands", "'I love you Esdeath!' : Show your love to your Esdeath.\n'Incursio!' : Show your real power to everyone.")
 		.addField("Lubbock's commands", "'Let me kiss you Tatsumi. O3O' : Why though?")
 		.addField("Leone's commands", "':3' : OwO.\n'Tatsumi...' : Oh no... Tatsumi cannot handle even more fan services!")
