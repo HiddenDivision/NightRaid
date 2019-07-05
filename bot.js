@@ -167,6 +167,27 @@ bot.on('message', msg=>{
 			return;
 		}
 	}
+	if(msg.content === "-help"){
+		const embed = new RichEmbed()
+		.setTitle('Available Commands :')
+		.addField('General commands', "'-help' : Shows you all available commands.\n'-meme' : Sends memes.")
+		.addField("Esdeath's commands", "'I love you Tatsumi' : Show your love to your Tatsumi.\n'...' : Somebody is about to have a bad time...\n'How are my boobs, Tatsumi?' : Esdeath want to do fan service for her Tatsumi.\n'I want to do it with you, Tatsumi...' : Tatsumi didn't expect that...")
+		.addField("Tatsumi's commands", "'I love you Esdeath!' : Show your love to your Esdeath.\n'Incursio!' : Show your real power to everyone.")
+		.addField("Lubbock's commands", "'Let me kiss you Tatsumi. O3O' : Why though?")
+		.addField("Leone's commands", "':3' : OwO.\n'Tatsumi...' : Oh no... Tatsumi cannot handle even more fan services!")
+		.addField("Akame's commands", "'Me go cry...' : Everyone knows that Akame cries a lot...\n'Ready to die?' : She has no mercy.\n'Please... Don't die Tatsumi...' : Yeah I know... It's not the only girl that loves him.\n'Adios... Esdeath and Tatsumi.' : They die. Big spoiler.")
+		.addField("Kurome's commands", "'*Staring intensely.*' : Please stop...")
+		.addField("Wave's commands", "'Grand Chariot!' : Another badass Teigu.")
+		.setColor(0x160033)
+		msg.channel.sendEmbed(embed);
+	}
+	if(msg.content === "-roles"){
+		const embed = new RichEmbed()
+		.setTitle('Night Raid roles :')
+		.addField('All tooken roles', "Esdeath (Kideath)\nTatsumi (LxnelyKing)\nLubbock (Ø₱)\nLeone (AkimboDice)\nAkame (Fridy)\nKurome (Naipeu)\nWave (ℝ𝔹𝕏𝟝𝟘𝟘𝟘)\n \nPlease contact Fridy#8811 to claim an unclaimed character.")
+		.setColor(0x160033)
+		msg.channel.sendEmbed(embed);
+	}
 	if(msg.content === "-meme"){
 		const randomPuppy = require('random-puppy');
 		const snekfetch = require('snekfetch');
