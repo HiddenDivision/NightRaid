@@ -249,7 +249,7 @@ bot.on('message', msg=>{
 				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
 				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
 				if(isNaN(parseFloat(args[1]))){
-					msg.channel.sendMessage('What is this..? Your time uses letter?');
+					return msg.channel.sendMessage('What is this..? Your time uses letter?');
 				}
 				let canada = args[1] - 6
 				let pheonix = args[1] - 9
@@ -282,7 +282,7 @@ bot.on('message', msg=>{
 				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
 				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
 				if(isNaN(parseFloat(args[1]))){
-					msg.channel.sendMessage('What is this..? Your time uses letter?');
+					return msg.channel.sendMessage('What is this..? Your time uses letter?');
 				}
 				let canada = args[1] - 6
 				let pheonix = args[1] - 9
