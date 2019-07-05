@@ -178,7 +178,7 @@ bot.on('message', msg=>{
 	}
 	if(msg.content === "OwO"){
 		if(msg.author.id === '155773083196588033'){
-			const susanoo = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596797560706826252/tenor_5.gif');
+			const susanoo = new Attachment('https://cdn.discordapp.com/attachments/596552545095254032/596797002159882262/image0.gif');
 			msg.channel.sendMessage(susanoo);
 		}
 		else{
