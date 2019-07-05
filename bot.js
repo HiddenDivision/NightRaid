@@ -248,7 +248,7 @@ bot.on('message', msg=>{
 				const mMessage = args.join(" ").slice(11);
 				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
 				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
-				if(isNaN(args[1])){
+				if(isNaN(parseFloat(args[1]))){
 					msg.channel.sendMessage('What is this..? Your time uses letter?');
 				}
 				let canada = args[1] - 6
@@ -275,13 +275,13 @@ bot.on('message', msg=>{
 				const mAuthor = msg.author.username
 				if(!mchannel) return;
 				msg.channel.bulkDelete(1);
-				mchannel.sendMessage('@everyone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
+				mchannel.sendMessage('@ev1eryone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
 			}
 			else{
 				const mMessage = args.join(" ").slice(12);
 				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
 				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
-				if(isNaN(args[1])){
+				if(isNaN(parseFloat(args[1]))){
 					msg.channel.sendMessage('What is this..? Your time uses letter?');
 				}
 				let canada = args[1] - 6
@@ -308,7 +308,7 @@ bot.on('message', msg=>{
 				const mAuthor = msg.author.username
 				if(!mchannel) return;
 				msg.channel.bulkDelete(1);
-				mchannel.sendMessage('@everyone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
+				mchannel.sendMessage('@ev1eryone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
 			}
 		break;
 		case '-kick':
