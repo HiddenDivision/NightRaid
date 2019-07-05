@@ -43,7 +43,14 @@ bot.on('message', msg=>{
 			msg.channel.sendMessage(esdeath);
 		}
 		else{
-			return;
+			if(msg.author.id === '333357946744602647'){
+				const akame = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596809522807439384/1498048478_tumblr_nglsikuDqM1rbrys3o2_r1_500.gif');
+				msg.channel.sendMessage('You know what will happen next... :smiling_imp:');
+				msg.channel.sendMessage(akame);
+			}
+			else{
+				return;
+			}
 		}
 	}
 	if(msg.content === 'How are my boobs, Tatsumi?'){
@@ -153,16 +160,6 @@ bot.on('message', msg=>{
 	if(msg.content === "Adios... Esdeath and Tatsumi."){
 		if(msg.author.id === '333357946744602647'){
 			const akame = new Attachment('https://cdn.discordapp.com/attachments/596552545095254032/596577319607336961/75f1126c6b2ec1969fc2eb3900b587272253b146_hq.gif');
-			msg.channel.sendMessage(akame);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "..."){
-		if(msg.author.id === '333357946744602647'){
-			const akame = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596809522807439384/1498048478_tumblr_nglsikuDqM1rbrys3o2_r1_500.gif');
-			msg.channel.sendMessage('You know what will happen next... :smiling_imp:');
 			msg.channel.sendMessage(akame);
 		}
 		else{
