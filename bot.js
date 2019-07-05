@@ -185,7 +185,7 @@ bot.on('message', msg=>{
 	if(msg.content === "-roles"){
 		const embed = new RichEmbed()
 		.setTitle('Night Raid roles :')
-		.addField('All tooken roles', "Esdeath (Kideath)\nTatsumi (LxnelyKing)\nLubbock (Ø₱)\nLeone (AkimboDice)\nAkame (Fridy)\nKurome (Naipeu)\nWave (ℝ𝔹𝕏𝟝𝟘𝟘𝟘)\n \nPlease contact Fridy#8811 to claim an unclaimed character.")
+		.addField('All tooken roles', "Esdeath (Kideath)\nTatsumi (LxnelyKing)\nLubbock (Ø₱)\nLeone (AkimboDice)\nAkame (Fridy)\nKurome (Naipeu)\nWave (ℝ𝔹𝕏𝟝𝟘𝟘𝟘)\nSusanoo (PotDYaourt)\n \nPlease contact Fridy#8811 to claim an unclaimed character.")
 		.setColor(0x160033)
 		msg.channel.sendEmbed(embed);
 	}
