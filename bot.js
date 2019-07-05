@@ -228,7 +228,7 @@ bot.on('message', msg=>{
 		.addField("Susanoo's commands", "'Mirror.' : Don't underestimate him. He reflect everything.")
 		.addField("Bols's commands", "'OwO' : Bols can be cute?")
 		.addField("Najinda's commands", "'Gimme food.' : She is hungry.")
-		.addField("Chealsea's commands", "'Being abused.' : Oh no. She's dead?")
+		.addField("Chelsea's commands", "'Being abused.' : Oh no. She's dead?")
 		.setColor(0x160033)
 		msg.channel.sendEmbed(embed);
 	}
