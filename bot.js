@@ -6,8 +6,8 @@ const PREFIX = '​';
 const testpre = '-';
 
 bot.on('ready', () =>{
-	console.log('Hidden division is now hidden.');
-	bot.user.setActivity('you.', { type: ('WATCHING')})
+	console.log('Online.');
+	bot.user.setActivity('you getting killed.', { type: ('WATCHING')})
 })
 
 bot.on('guildMemberAdd', member =>{
