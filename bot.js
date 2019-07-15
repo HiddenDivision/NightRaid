@@ -1,251 +1,32 @@
 const {Client, Attachment, RichEmbed, Guild, GuildMember, MessageMentions, Role} = require('discord.js');
 const bot = new Client();
 const superagent = require('superagent');
+
 const PREFIX = '​';
 const testpre = '-';
 
 bot.on('ready', () =>{
-	console.log('Night Raid is on.');
-	bot.user.setActivity('raiding on the night.', { type: ('PLAYING')})
+	console.log('Hidden division is now hidden.');
+	bot.user.setActivity('you.', { type: ('WATCHING')})
 })
 
 bot.on('guildMemberAdd', member =>{
 
-	const channel = member.guild.channels.find(channel => channel.name === "wɇƚ¢¤₥ɇ-ƀ¤¤ꞩʈ");
+	const channel = member.guild.channels.find(channel => channel.name === "𝔚𝔢𝔩𝔠𝔬𝔪𝔢");
 	if(!channel) return;
-	channel.sendMessage(`Welcome in Night Raid, ${member}. have fun raiding.`);
+	let role = member.guild.roles.find("name", "𝔊𝔲𝔢𝔰𝔱𝔰");
+	member.addRole(role.id);
+	channel.sendMessage(`Welcome in 〷 𝔅𝔬𝔯𝔫 𝔎𝔦𝔩𝔩𝔢𝔯𝔰 𝔓𝔲𝔟𝔩𝔦𝔠 〷, ${member}.`);
 })
 
 bot.on('guildMemberRemove', member =>{
 
-	const channel = member.guild.channels.find(channel => channel.name === "wɇƚ¢¤₥ɇ-ƀ¤¤ꞩʈ");
+	const channel = member.guild.channels.find(channel => channel.name === "𝔚𝔢𝔩𝔠𝔬𝔪𝔢");
 	if(!channel) return;
-	channel.sendMessage(`You were not enough for Night Raid, ${member}...`)
+	channel.sendMessage(`${member} got killed. We will see you at the graveyard.`)
 })
+
 bot.on('message', msg=>{
-
-	mention = msg.mentions.users.first();
-
-	if(msg.content === 'I love you Tatsumi!'){
-		if(msg.author.id === '596034659419422739'){
-			const esdeath = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596568910036467721/tenor.gif');
-			msg.channel.sendMessage("Tatsumi... :heart:");
-			msg.channel.sendMessage(esdeath);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === '...'){
-		if(msg.author.id === '596034659419422739'){
-			const esdeath = new Attachment('https://cdn.discordapp.com/attachments/596552545095254032/596587075302850560/image0.gif');
-			msg.channel.sendMessage("I'm going to torture you to death. >:)");
-			msg.channel.sendMessage(esdeath);
-		}
-		else{
-			if(msg.author.id === '333357946744602647'){
-				const akame = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596809522807439384/1498048478_tumblr_nglsikuDqM1rbrys3o2_r1_500.gif');
-				msg.channel.sendMessage('You know what will happen next... :smiling_imp:');
-				msg.channel.sendMessage(akame);
-			}
-			else{
-				return;
-			}
-		}
-	}
-	if(msg.content === 'How are my boobs, Tatsumi?'){
-		if(msg.author.id === '596034659419422739'){
-			const esdeath = new Attachment('https://cdn.discordapp.com/attachments/596552545095254032/596587280395927592/image0.gif');
-			msg.channel.sendMessage("So? How are them?");
-			msg.channel.sendMessage(esdeath);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === 'I want to do it with you, Tatsumi...'){
-		if(msg.author.id === '596034659419422739'){
-			const esdeath = new Attachment('https://cdn.discordapp.com/attachments/596552550027755525/596589057182531584/image0.jpg');
-			msg.channel.sendMessage("Let's have fun...");
-			msg.channel.sendMessage(esdeath);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "I'm cute."){
-		if(msg.author.id === '596034659419422739'){
-			const esdeath = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596803328642514944/1459830568_4bf4f30c6cb57ef104ab411e0a6322421409502863_full.gif');
-			msg.channel.sendMessage("Yes yes. She is cute.");
-			msg.channel.sendMessage(esdeath);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === 'I love you Esdeath!'){
-		if(msg.author.id === '285962307987701762'){
-			const tatsumi = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596570280101543936/wpid-screenshot_2014-11-15-18-18-02-1.png');
-			msg.channel.sendMessage("Esdeath. :heart:");
-			msg.channel.sendMessage(tatsumi);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === 'Incursio!'){
-		if(msg.author.id === '285962307987701762'){
-			const tatsumi = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596585226550116368/tenor_4.gif');
-			msg.channel.sendMessage(tatsumi);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === 'Let me kiss you Tatsumi. O3O'){
-		if(msg.author.id === '201584405116878848'){
-			const lubbok = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596577303509860382/akame-ga-kill-funny-gif-4.gif');
-			msg.channel.sendMessage(lubbok);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === ':3'){
-		if(msg.author.id === '162214121822093313'){
-			const leone = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596579161942786068/tumblr_n98t3jkF421r0ifk5o1_1280.gif');
-			msg.channel.sendMessage(leone);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === 'Tatsumi...'){
-		if(msg.author.id === '162214121822093313'){
-			const leone = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596571495501791260/tenor_1.gif');
-			msg.channel.sendMessage("Ta- tsu- mi-...");
-			msg.channel.sendMessage(leone);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === 'Me go cry...'){
-		if(msg.author.id === '333357946744602647'){
-			const akame = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596572201163948043/WeakEquatorialHermitcrab-size_restricted.gif');
-			msg.channel.sendMessage(akame);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === 'Ready to die?'){
-		if(msg.author.id === '333357946744602647'){
-			const akame = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596574044497903616/1519679125_e9926172148a.gif');
-			msg.channel.sendMessage(akame);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "Please... Don't die Tatsumi..."){
-		if(msg.author.id === '333357946744602647'){
-			const akame = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596576058472529920/3f71a113af26224cbfb30bdd9894042a.gif');
-			msg.channel.sendMessage(akame);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "Adios... Esdeath and Tatsumi."){
-		if(msg.author.id === '333357946744602647'){
-			const akame = new Attachment('https://cdn.discordapp.com/attachments/596552545095254032/596577319607336961/75f1126c6b2ec1969fc2eb3900b587272253b146_hq.gif');
-			msg.channel.sendMessage(akame);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "*Staring intensely.*"){
-		if(msg.author.id === '216320185873727488'){
-			const kurome = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596582707752861696/tenor_2.gif');
-			msg.channel.sendMessage(kurome);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "Grand Chariot!"){
-		if(msg.author.id === '375093545809477633'){
-			const wave = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596583737207160858/tenor_3.gif');
-			msg.channel.sendMessage(wave);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "Mirror."){
-		if(msg.author.id === '219422877064101890'){
-			const susanoo = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596797560706826252/tenor_5.gif');
-			msg.channel.sendMessage(susanoo);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "OwO"){
-		if(msg.author.id === '155773083196588033'){
-			const susanoo = new Attachment('https://cdn.discordapp.com/attachments/596552545095254032/596797002159882262/image0.gif');
-			msg.channel.sendMessage(susanoo);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "Gimme food."){
-		if(msg.author.id === '186066160146448384'){
-			const najinda = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596805657764692033/tenor_6.gif');
-			msg.channel.sendMessage(najinda);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "Being abused."){
-		if(msg.author.id === '195515380326858752'){
-			const chelsea = new Attachment('https://cdn.discordapp.com/attachments/574383177418670080/596807682569011210/giphy.gif');
-			msg.channel.sendMessage(chelsea);
-		}
-		else{
-			return;
-		}
-	}
-	if(msg.content === "-help"){
-		const embed = new RichEmbed()
-		.setTitle('Available Commands :')
-		.addField('General commands', "'-help' : Shows you all available commands.\n'-meme' : Sends memes.")
-		.addField('Moderation commands', "'-kick' : Kicks a specific user from the server.\n'-ban' : Ban a specific user from the server.\n'-unban' : Unban a specific user from the server (Only with the discord ID).\n'-purge' : Pruge a specific amount of messages on the channel.\n'-announcement' : Makes a public announcement to the server.\n'-meeting' : Makes a public meeting to the server.")
-		.addField("Esdeath's commands", "'I love you Tatsumi' : Show your love to your Tatsumi.\n'...' : Somebody is about to have a bad time...\n'How are my boobs, Tatsumi?' : Esdeath want to do fan service for her Tatsumi.\n'I want to do it with you, Tatsumi...' : Tatsumi didn't expect that...\n'I'm cute.' : She best girl.")
-		.addField("Tatsumi's commands", "'I love you Esdeath!' : Show your love to your Esdeath.\n'Incursio!' : Show your real power to everyone.")
-		.addField("Lubbock's commands", "'Let me kiss you Tatsumi. O3O' : Why though?")
-		.addField("Leone's commands", "':3' : OwO.\n'Tatsumi...' : Oh no... Tatsumi cannot handle even more fan services!")
-		.addField("Akame's commands", "'Me go cry...' : Everyone knows that Akame cries a lot...\n'...' : You said something wrong...\n'Ready to die?' : She has no mercy.\n'Please... Don't die Tatsumi...' : Yeah I know... It's not the only girl that loves him.\n'Adios... Esdeath and Tatsumi.' : They die. Big spoiler.")
-		.addField("Kurome's commands", "'*Staring intensely.*' : Please stop...")
-		.addField("Wave's commands", "'Grand Chariot!' : Another badass Teigu.")
-		.addField("Susanoo's commands", "'Mirror.' : Don't underestimate him. He reflect everything.")
-		.addField("Bols's commands", "'OwO' : Bols can be cute?")
-		.addField("Najinda's commands", "'Gimme food.' : She is hungry.")
-		.addField("Chelsea's commands", "'Being abused.' : Oh no. She's dead?")
-		.setColor(0x160033)
-		msg.channel.sendEmbed(embed);
-	}
-	if(msg.content === "-roles"){
-		const embed = new RichEmbed()
-		.setTitle('Night Raid roles :')
-		.addField('All tooken roles', "Esdeath (Kideath)\nTatsumi (LxnelyKing)\nLubbock (Ø₱)\nLeone (AkimboDice)\nAkame (Fridy)\nKurome (Naipeu)\nWave (ℝ𝔹𝕏𝟝𝟘𝟘𝟘)\nSusanoo (PotDYaourt)\nBols (Twachx)\nNajinda (Yamete)\nChelsea (YaNobie)\n \nPlease contact Fridy#8811 to claim an unclaimed character.")
-		.setColor(0x160033)
-		msg.channel.sendEmbed(embed);
-	}
 	if(msg.content === "-meme"){
 		const randomPuppy = require('random-puppy');
 		const snekfetch = require('snekfetch');
@@ -276,107 +57,77 @@ bot.on('message', msg=>{
 			});
 		});
 	}
+	if(msg.content === "-help"){
+		const embed = new RichEmbed()
+		.setTitle('Available Commands :')
+		.addField('General commands', "'-help' : Shows you all available commands.\n'-kick' : Kicks a specific user from the server.\n'-ban' : Ban a specific user from the server.\n'-unban' : Unban a specific user from the server (Only with the discord ID).\n'-purge' : Pruge a specific amount of messages on the channel.\n'-announcement' : Make a public announcement to the server.")
+		.addField('Entertainment commands', "'-meme' : Sends memes.\n'-OwO' : Makes any text in OwO.\n'Pwease send Spanzer's thighs.' (Without the prefix) : Send's Spanzer's thighs.")
+		.addField('Current normal prefix', "'-' : It's the current prefix.")
+		.setColor(0x160033)
+		msg.channel.sendEmbed(embed);
+	}
+	if(msg.content === "Pwease send Spanzer's thighs."){
+		const attachement = new Attachment('https://cdn.discordapp.com/attachments/574629212258959387/594448748256428042/JPEG_20190510_205536.jpg');
+		msg.channel.sendMessage(attachement);
+	}
+	let args2 = msg.content.substring(testpre.length - 1).split(" ");
+	switch(args2[0]){
+		case '-OwO':
+			if(!args2[1]) return msg.channel.sendMessage('OwO?');
+			const owoMessage = args2.join(" ").slice(5);
+			someString = owoMessage
+			anotherString = someString.replace(/r/g, 'w');
+			s1 = anotherString.replace(/R/g, 'W');
+			s2 = s1.replace(/y/g, 'w');
+			s3 = s2.replace(/Y/g, 'W');
+			s4 = s3.replace(/l/g, 'w');
+			s5 = s4.replace(/L/g, 'W');
+			msg.channel.bulkDelete('1');
+			msg.channel.sendMessage(s5);
+		break;
+	}
 	let args = msg.content.substring(PREFIX.length - 1).split(" ");
 	switch(args[0]){
 		case '-purge':
 			const command = args.join(" ");
+			if(command.includes('-')) return;
 			if(!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("You don't have the permission to purge messages!");
 			if(!msg.guild.me.hasPermission("MANAGE_MESSAGES")) return msg.channel.sendMessage("I don't have the allowed permission to purge messages!");
 			if(!args[1]) return msg.channel.sendMessage('Please specify a number of messages to be purged!');
 			msg.channel.bulkDelete(args[1]);
 		break;
+		case '-iregards':
+			mention = msg.mentions.users.first();
+			if(!msg.member.roles.find(r => r.name === "Leader")) return msg.channel.sendMessage("You are not the leader. You can't do that.");
+			if(!msg.author.id === '333357946744602647') return msg.channel.sendMessage("You are not the leader. You can't do that.");
+			if(!args[1]) return msg.channel.sendMessage('Who are you trying to send your regards?')
+			const regard = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif')
+			mention.sendMessage('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ send their regards.');
+			mention.sendMessage(regard);
+			msg.channel.bulkDelete(1);
+		break;
 		case '-announcement':
+			if(!args[1]) return msg.channel.sendMessage('What are you trying to announce?')
 			if(!msg.member.hasPermission("ADMINISTRATOR")) return msg.channel.sendMessage("You don't have the permission to make an announcement!");
 			if(!msg.guild.me.hasPermission("ADMINISTRATOR")) return msg.channel.sendMessage("I don't have the allowed permission to make an announcement!");
-			if(!args[1]) return msg.channel.sendMessage('What are you trying to announce?')
 			const aMessage = args.join(" ").slice(14);
-			const achannel = bot.channels.find(channel => channel.name === "₳ᵰᵰ¤ᵾᵰ¢ɇ₥ɇᵰʈ");
+			const achannel = bot.channels.find(channel => channel.name === "𝔄𝔫𝔫𝔬𝔲𝔫𝔠𝔢𝔪𝔢𝔫𝔱𝔰");
 			const aAuthor = msg.author.username
-			const agif = new Attachment('https://media.discordapp.net/attachments/596552545095254032/596560337533272084/1486990413_Flag.gif');
+			const agif = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif');
 			if(!achannel) return;
 			msg.channel.bulkDelete(1);
 			achannel.sendMessage('@everyone \n \n' + aMessage + '\n \n' + 'Announcement made by ' + aAuthor + '.')
 			achannel.sendMessage(agif)
 		break;
-		case '-meeting':
-			if(!msg.member.roles.find(r => r.name === "Night God")) return msg.channel.sendMessage("You are not the leader. You can't create a meeting.");
-			if(!args[2]) return msg.channel.sendMessage('A meeting without anything? Sounds boring...')
-			if(args[1].length === 1){
-				const mMessage = args.join(" ").slice(11);
-				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
-				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
-				if(isNaN(parseFloat(args[1]))){
-					return msg.channel.sendMessage('What is this..? Your time uses letters?');
-				}
-				let canada = args[1] - 6
-				let pheonix = args[1] - 9
-				let argentina = args[1] - 5
-				let mexico = args[1] - 7
-				if(canada < 0){
-					canada = args[1] - 6
-					canada = canada + 24;
-				}
-				if(pheonix < 0){
-					pheonix = args[1] - 9
-					pheonix = pheonix + 24;
-				}
-				if(argentina < 0){
-					argentina = args[1] - 5
-					argentina = argentina + 24;
-				}
-				if(mexico < 0){
-					mexico = args[1] - 7
-					mexico = mexico + 24;
-				}
-				const mchannel = bot.channels.find(channel => channel.name === "ɱɇɇʈłᵰǥ");
-				const mAuthor = msg.author.username
-				if(!mchannel) return;
-				msg.channel.bulkDelete(1);
-				mchannel.sendMessage('@everyone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
-			}
-			else{
-				const mMessage = args.join(" ").slice(12);
-				if(args[1] > 24) return msg.channel.sendMessage('What time system are you using? Alien?');
-				if(args[1] < 0) return msg.channel.sendMessage('Negative time? Are you trying to go back in time?');
-				if(isNaN(parseFloat(args[1]))){
-					return msg.channel.sendMessage('What is this..? Your time uses letters?');
-				}
-				let canada = args[1] - 6
-				let pheonix = args[1] - 9
-				let argentina = args[1] - 5
-				let mexico = args[1] - 7
-				if(canada < 0){
-					canada = args[1] - 6
-					canada = canada + 24;
-				}
-				if(pheonix < 0){
-					pheonix = args[1] - 9
-					pheonix = pheonix + 24;
-				}
-				if(argentina < 0){
-					argentina = args[1] - 5
-					argentina = argentina + 24;
-				}
-				if(mexico < 0){
-					mexico = args[1] - 7
-					mexico = mexico + 24;
-				}
-				const mchannel = bot.channels.find(channel => channel.name === "ɱɇɇʈłᵰǥ");
-				const mAuthor = msg.author.username
-				if(!mchannel) return;
-				msg.channel.bulkDelete(1);
-				mchannel.sendMessage('@everyone \n**New Meeting**\n\n' + mMessage + '\n\nTime:\nFrance : ' + args[1] + ':00' + '\nMexico : ' + mexico + ':00' + '\nArgentina : ' + argentina + ':00' + '\nCanada : ' + canada + ':00' + '\nCLT/US East : ' + canada + ':00' + '\nPheonix : ' + pheonix + ':00' + '\nCentral : ' + pheonix + ':00' + '\n\nMeeting made by ' + mAuthor + '.')
-			}
-		break;
 		case '-kick':
+			if(!args[1]) return msg.channel.sendMessage('Please specify a user!')
 			const tuser = msg.mentions.users.first();
 			const kreason = args.join(" ").slice(28);
-			if(!msg.member.hasPermission("KICK_MEMBERS")) return msg.channel.sendMessage("You don't have the permission to kick someone!");
-			if(!msg.guild.me.hasPermission("KICK_MEMBERS")) return msg.channel.sendMessage("I don't have the allowed permission to kick someone!");
-			if(!args[1]) return msg.channel.sendMessage('Please specify a user!')
 			if(tuser){
 				const member = msg.guild.member(tuser)
 				if(member){
+					if(!msg.member.hasPermission("KICK_MEMBERS")) return msg.channel.sendMessage("You don't have the permission to kick someone!");
+					if(!msg.guild.me.hasPermission("KICK_MEMBERS")) return msg.channel.sendMessage("I don't have the allowed permission to kick someone!");
 					if(!kreason){
 						member.kick('You were kicked.');
 						const kembed = new RichEmbed()
@@ -399,14 +150,14 @@ bot.on('message', msg=>{
 			}
 		break;
 		case '-ban':
-			if(!msg.member.hasPermission("BAN_MEMBERS")) return msg.channel.sendMessage("You don't have the permission to ban someone!");
-			if(!msg.guild.me.hasPermission("BAN_MEMBERS")) return msg.channel.sendMessage("I don't have the allowed permission to ban someone!");
 			if(!args[1]) return msg.channel.sendMessage('Please specify a user!')
 			const user = msg.mentions.users.first();
 			const breason = args.join(" ").slice(27);
 			if(user){
 				const member = msg.guild.member(user)
 				if(member){
+					if(!msg.member.hasPermission("BAN_MEMBERS")) return msg.channel.sendMessage("You don't have the permission to ban someone!");
+					if(!msg.guild.me.hasPermission("BAN_MEMBERS")) return msg.channel.sendMessage("I don't have the allowed permission to ban someone!");
 					if(!breason){
 						member.ban('You were banned.');
 						const bembed = new RichEmbed()
@@ -429,9 +180,9 @@ bot.on('message', msg=>{
 			}
 		break;
 		case '-unban':
+			if(!args[1]) return msg.channel.sendMessage('Please specify a user ID!')
 			if(!msg.member.hasPermission("BAN_MEMBERS")) return msg.channel.sendMessage("You don't have the permission to unban someone!");
 			if(!msg.guild.me.hasPermission("BAN_MEMBERS")) return msg.channel.sendMessage("I don't have the allowed permission to unban someone!");
-			if(!args[1]) return msg.channel.sendMessage('Please specify a user ID!')
 			msg.guild.unban(args[1])
 			const uembed = new RichEmbed()
 			.setTitle('User has been unbanned!')
