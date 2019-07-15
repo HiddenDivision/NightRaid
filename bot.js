@@ -101,8 +101,8 @@ bot.on('message', msg=>{
 			if(!msg.member.roles.find(r => r.name === "Leader")) return msg.channel.sendMessage("You are not the leader. You can't do that.");
 			if(!msg.author.id === '333357946744602647') return msg.channel.sendMessage("You are not the leader. You can't do that.");
 			if(!args[1]) return msg.channel.sendMessage('Who are you trying to send your regards?')
-			const regard = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif')
-			mention.sendMessage('Ɦıᴅᴅᴇɴ Ðıᴠısıᴏɴ send their regards.');
+			const regard = new Attachment('https://cdn.discordapp.com/attachments/598945838646951956/600162120998322178/BORN_KILLERS.gif')
+			mention.sendMessage('𝔅𝔬𝔯𝔫 𝔎𝔦𝔩𝔩𝔢𝔯𝔰 sends their regards.');
 			mention.sendMessage(regard);
 			msg.channel.bulkDelete(1);
 		break;
@@ -113,7 +113,7 @@ bot.on('message', msg=>{
 			const aMessage = args.join(" ").slice(14);
 			const achannel = bot.channels.find(channel => channel.name === "𝔄𝔫𝔫𝔬𝔲𝔫𝔠𝔢𝔪𝔢𝔫𝔱𝔰");
 			const aAuthor = msg.author.username
-			const agif = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif');
+			const agif = new Attachment('https://cdn.discordapp.com/attachments/598945838646951956/600162120998322178/BORN_KILLERS.gif');
 			if(!achannel) return;
 			msg.channel.bulkDelete(1);
 			achannel.sendMessage('@everyone \n \n' + aMessage + '\n \n' + 'Announcement made by ' + aAuthor + '.')
