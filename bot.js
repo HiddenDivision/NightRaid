@@ -191,7 +191,7 @@ bot.on('message', msg=>{
 			if(!msg.author.id === '333357946744602647') return msg.channel.sendMessage("You are not the leader. You can't do that.");
 			if(!args[1]) return msg.channel.sendMessage('?');
 			let dmGuild = msg.guild;
-			var message = msg.content.slice(6);
+			var message = msg.content.slice(22);
 			let memberarray = dmGuild.members.array();
 			let membercount = memberarray.length;
 			const regard2 = new Attachment('https://media.discordapp.net/attachments/572096391149649920/572508265506668556/Hidden_Division.gif')
