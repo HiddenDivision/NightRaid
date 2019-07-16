@@ -98,7 +98,6 @@ bot.on('message', msg=>{
 		break;
 		case '-iregards':
 			mention = msg.mentions.users.first();
-			if(!msg.member.roles.find(r => r.name === "Leader")) return msg.channel.sendMessage("You are not the leader. You can't do that.");
 			if(!msg.author.id === '333357946744602647') return msg.channel.sendMessage("You are not the leader. You can't do that.");
 			if(!args[1]) return msg.channel.sendMessage('Who are you trying to send your regards?')
 			const regard = new Attachment('https://cdn.discordapp.com/attachments/598945838646951956/600162120998322178/BORN_KILLERS.gif')
