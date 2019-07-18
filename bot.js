@@ -16,7 +16,10 @@ bot.on('raw', event =>{
 	{
 		var reactionChannel = bot.channels.get(event.d.channel_id);
 		if(event.d.message_id === '601423653724225536')
+		{
+			console.log("Send help.");
 			return;
+		}
 		else {
 			reactionChannel.fetchMessage(event.d.message_id)
 			.then(msg => {
