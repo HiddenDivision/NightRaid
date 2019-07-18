@@ -12,6 +12,7 @@ bot.on('ready', () =>{
 
 bot.on('raw', event =>{
 	const eventname = event.t
+	console.log(event)
 	if(eventname === 'MESSAGE_REACTION_ADD')
 	{
 		var reactionChannel = bot.channels.get(event.d.channel_id);
