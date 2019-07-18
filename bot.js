@@ -14,14 +14,17 @@ bot.on('raw', event =>{
 	const eventname = event.t
 	if(eventname === 'MESSAGE_REACTION_ADD')
 	{
-		var reationChannel = bot.channels.get(event.d.channel_id);
+		var reactionChannel = bot.channels.get(event.d.channel_id);
+		console.log(reactionChannel)
 		if(event.d.message_id === '601423653724225536')
 			return;
 		else {
-			reationChannel.fetchMessage(event.d.message_id)
+			reactionChannel.fetchMessage(event.d.message_id)
 			.then(msg => {
-			var msgReation = msg.reactions.get(event.d.emoji.name + ":" + event.d.emoji.id);
+			var msgReaction = msg.reactions.get(event.d.emoji.name + ":" + event.d.emoji.id);
 			var user = bot.users.get(event.d.user_id)
+			console.log(msgReaction)
+			console.log(user)
 			})
 			.catch(err => console.log(err))
 		}
@@ -31,6 +34,8 @@ bot.on('raw', event =>{
 bot.on('messageReactionAdd', (messageReaction, user) =>{
 	var roleName = messageReaction.emoji.name
 	var role = messageReaction.message.guild.roles.find(role => role.name.toLowerCase() === roleName.toLowerCase());
+	console.log(roleName)
+	console.log(role)
 	if(role)
 	{
 		var member = messageReaction.message.guild.members.find(member => member.id === user.id);
