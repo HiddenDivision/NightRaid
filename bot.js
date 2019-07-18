@@ -36,7 +36,7 @@ bot.on('raw', event =>{
 	}
 });
 
-bot.on('messageReactionAdd', (messageReaction, user) =>{
+bot.on('messadawdaaddadgeReactionAdd', (messageReaction, user) =>{
 	var roleName = messageReaction.emoji.name
 	console.log(roleName)
 	var member = messageReaction.message.guild.members.find(member => member.id === user.id);
