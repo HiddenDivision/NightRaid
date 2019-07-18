@@ -12,7 +12,6 @@ bot.on('ready', () =>{
 
 bot.on('raw', event =>{
 	const eventname = event.t
-	console.log(event)
 	if(eventname === 'MESSAGE_REACTION_ADD')
 	{
 		var reactionChannel = bot.channels.get(event.d.channel_id);
@@ -36,15 +35,9 @@ bot.on('raw', event =>{
 	}
 });
 
-bot.on('messadawdaaddadgeReactionAdd', (messageReaction, user) =>{
-	var roleName = messageReaction.emoji.name
-	console.log(roleName)
-	var member = messageReaction.message.guild.members.find(member => member.id === user.id);
-	if(member)
-	{
-		member.addRole('Verified'.id)
-		console.log("Success.")
-	}
+bot.on('messageReactionAdd', (messageReaction, user) =>{
+	var roleName = messageReaction.emoji.name;
+	console.log(roleName);
 })
 
 bot.on('guildMemberAdd', member =>{
