@@ -20,6 +20,7 @@ bot.on('raw', event =>{
 			console.log("Send help.");
 			var member = event.d.user_id
 			console.log(member);
+			bot.fetchUser(member)
 			return;
 		}
 		else {
