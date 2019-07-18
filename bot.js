@@ -19,7 +19,6 @@ bot.on('raw', event =>{
 		{
 			console.log("Send help.");
 			var member = event.d.user_id
-			console.log(member);
 			return;
 		}
 		else {
@@ -27,8 +26,6 @@ bot.on('raw', event =>{
 			.then(msg => {
 			var msgReaction = msg.reactions.get(event.d.emoji.name + ":" + event.d.emoji.id);
 			var user = bot.users.get(event.d.user_id)
-			console.log(msgReaction)
-			console.log(user)
 			})
 			.catch(err => console.log(err))
 		}
