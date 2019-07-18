@@ -10,6 +10,39 @@ bot.on('ready', () =>{
 	bot.user.setActivity('you getting killed.', { type: ('WATCHING')})
 })
 
+bot.on('raw', event =>{
+	console.log(event);
+	const eventname = event.t
+	if(eventname === 'MESSAGE_REACTION_ADD')
+	{
+		var reationChannel = bot.channels.get(event.d.channel_id);
+		if(event.d.message_id === '601423653724225536')
+			return;
+		else {
+			reationChannel.fetchMessage(event.d.message_id)
+			.then(msg => {
+			var msgReation = msg.reactions.get(event.d.emoji.name + ":" + event.d.emoji.id);
+			var user = bot.users.get(event.d.user_id)
+			})
+			.catch(err => console.log(err))
+		}
+	}
+});
+
+bot.on('messageReactionAdd', (messageReaction, user) =>{
+	var roleName = messageReaction.emoji.name
+	var role = messageReaction.message.guild.roles.find(role => role.name.toLowerCase() === roleName.toLowerCase());
+	if(role)
+	{
+		var member = messageReaction.message.guild.members.find(member => member.id === user.id);
+		if(member)
+		{
+			member.addRole(role.id)
+			console.log("Success.")
+		}
+	}
+})
+
 bot.on('guildMemberAdd', member =>{
 
 	const channel = member.guild.channels.find(channel => channel.name === "𝔚𝔢𝔩𝔠𝔬𝔪𝔢");
