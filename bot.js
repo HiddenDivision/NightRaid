@@ -7,6 +7,8 @@ const testpre = '-';
 
 bot.on('ready', () =>{
 	console.log('Online.');
+	var Channel = bot.channels.get("601423369883222016");
+	Channel.fetchMessage("601423653724225536");
 	bot.user.setActivity('you getting killed.', { type: ('WATCHING')})
 })
 
