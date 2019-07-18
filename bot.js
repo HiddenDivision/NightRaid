@@ -18,6 +18,8 @@ bot.on('raw', event =>{
 		if(event.d.message_id === '601423653724225536')
 		{
 			console.log("Send help.");
+			var member = event.d.user_id
+			console.log(member);
 			return;
 		}
 		else {
