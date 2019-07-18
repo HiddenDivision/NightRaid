@@ -11,7 +11,6 @@ bot.on('ready', () =>{
 })
 
 bot.on('raw', event =>{
-	console.log(event);
 	const eventname = event.t
 	if(eventname === 'MESSAGE_REACTION_ADD')
 	{
