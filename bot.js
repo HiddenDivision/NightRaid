@@ -21,9 +21,6 @@ bot.on('raw', event =>{
 			console.log("Send help.");
 			var member = event.d.user_id
 			console.log(member);
-			var user = bot.fetchUser(member).username
-			console.log(user)
-			event.d.user_id.addRole('Verified')
 			return;
 		}
 		else {
