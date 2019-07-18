@@ -17,9 +17,12 @@ bot.on('raw', event =>{
 		var reactionChannel = bot.channels.get(event.d.channel_id);
 		if(event.d.message_id === '601423653724225536')
 		{
-			console.log("Send help.");
-			var member = event.d.user_id
-			return;
+			reactionChannel.fetchMessage(event.d.message_id)
+			.then(msg => {
+			var msgReaction = msg.reactions.get(event.d.emoji.name + ":" + event.d.emoji.id);
+			var user = bot.users.get(event.d.user_id)
+			})
+			.catch(err => console.log(err))
 		}
 		else {
 			reactionChannel.fetchMessage(event.d.message_id)
@@ -33,8 +36,15 @@ bot.on('raw', event =>{
 });
 
 bot.on('messageReactionAdd', (messageReaction, user) =>{
-	var roleName = messageReaction.emoji.name;
-	console.log(roleName);
+	var roleName = messageReaction.emoji.name
+	console.log(roleName)
+	return;
+	var member = messageReaction.message.guild.members.find(member => member.id === user.id);
+	if(member)
+	{
+		member.addRole('Verified'.id)
+		console.log("Success.")
+	}
 })
 
 bot.on('guildMemberAdd', member =>{
